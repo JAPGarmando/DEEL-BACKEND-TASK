@@ -1,12 +1,13 @@
 # DEEL BACKEND TASK
+## What I would have implemented
+- More validations of types
+- Docs for the REST API
+- Tests using jest
+- An interface for the requests
+- TypeScript
 
-  
-
-💫 Welcome! 🎉
-
-
-This backend exercise involves building a Node.js/Express.js app that will serve a REST API. We imagine you should spend around 3 hours at implement this feature.
-
+## Note: 
+- A postman collection is exported under postman folder with validated requests
 ## Data Models
 
 > **All models are defined in src/model.js**
@@ -29,12 +30,6 @@ contractor get paid for jobs by clients under a certain contract.
   
 The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recommend using the LTS version.
 
-  
-
-1. Start by cloning this repository.
-
-  
-
 1. In the repo root directory, run `npm install` to gather all dependencies.
 
   
@@ -44,12 +39,6 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
   
 
 1. Then run `npm start` which should start both the server and the React client.
-
-  
-
-❗️ **Make sure you commit all changes to the master branch!**
-
-  
   
 
 ## Technical Notes
@@ -74,7 +63,7 @@ Below is a list of the required API's for the application.
   
 
 
-1. ***GET*** `/contracts/:id` - This API is broken 😵! it should return the contract only if it belongs to the profile calling. better fix that!
+1. ***GET*** `/contracts/:id` - Should return the contract only if it belongs to the profile calling. better fix that!
 
 1. ***GET*** `/contracts` - Returns a list of contracts belonging to a user (client or contractor), the list should only contain non terminated contracts.
 
@@ -106,21 +95,3 @@ Below is a list of the required API's for the application.
     }
 ]
 ```
-
-  
-
-## Going Above and Beyond the Requirements
-
-Given the time expectations of this exercise, we don't expect anyone to submit anything super fancy, but if you find yourself with extra time, any extra credit item(s) that showcase your unique strengths would be awesome! 🙌
-
-It would be great for example if you'd write some unit test / simple frontend demostrating calls to your fresh APIs.
-
-  
-
-## Submitting the Assignment
-
-When you have finished the assignment, create a github repository and send us the link.
-
-  
-
-Thank you and good luck! 🙏
