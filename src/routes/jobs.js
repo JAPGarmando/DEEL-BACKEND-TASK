@@ -1,8 +1,10 @@
 const { Router } = require( 'express');
 const router = Router();
 const {getProfile} = require( "../middleware/getProfile");
-const {validateIsClient} = require( "../middleware/validateProfile");
 const  {payJobById, getUnpaidJobs} = require ( '../controllers/jobs');
+
+// Middleware to validate if the profile is a client
+const {validateIsClient} = require( "../middleware/validateProfile");
 
 router
     .post('/:job_id/pay', getProfile, validateIsClient, payJobById)

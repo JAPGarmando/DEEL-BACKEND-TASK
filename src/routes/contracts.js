@@ -2,7 +2,6 @@ const { Router } = require( 'express');
 const router = Router();
 const {getProfile} = require( "../middleware/getProfile");
 const  {getContractById, getContractsByProfile} = require ( '../controllers/contracts');
-//QBO Native integration
 
 router
     .get('/:id', getProfile, getContractById)

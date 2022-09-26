@@ -1,5 +1,6 @@
 const { Op } = require("sequelize");
 const getUnpaidJobs = async (req, res) => {
+    // GET the models
     const {
         Job,
         Contract
@@ -7,6 +8,8 @@ const getUnpaidJobs = async (req, res) => {
     const {
         dataValues: profileData
     } = req.profile;
+
+    //Dynamic where to set whether is a client or contractor when searching
     const whereFilter = {
         where: {
             paid: {
@@ -24,6 +27,7 @@ const getUnpaidJobs = async (req, res) => {
         (whereFilter.include.where.ClientId = profileData.id) :
         (whereFilter.include.where.ContractorId = profileData.id);
     const unpaidJobs = await Job.findAll(whereFilter);
+
     if (!unpaidJobs) return res.status(404).end();
     res.json(unpaidJobs);
 };

@@ -1,7 +1,6 @@
 const payJobById = async (req, res) =>{
     // Get models 
-    const {Job} = req.app.get('models');
-    const {Contract} = req.app.get('models');
+    const {Job, Contract} = req.app.get('models');
 
     const {job_id: jobId} = req.params
     const profileData  = req.profile;

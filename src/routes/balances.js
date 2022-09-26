@@ -2,7 +2,6 @@ const { Router } = require( 'express');
 const router = Router();
 const {getProfile} = require( "../middleware/getProfile");
 const  {depositBalanceByUserId} = require ( '../controllers/balances');
-//QBO Native integration
 
 router
     .post('/deposit/:userId', getProfile, depositBalanceByUserId)
